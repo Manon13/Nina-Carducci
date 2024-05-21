@@ -72,7 +72,7 @@ body {
 
 }
 #about-me {
-	flex: 2
+	flex: 2;
 }
 .about-me__title {
 	margin-top: 1em;
@@ -81,9 +81,11 @@ body {
 }
 .about-me__introduction {
 	font-family: 'Spectral';
+	font-size: 16px;
 	font-weight: 800;
 	font-style: italic;
 	width: 60%;
+	margin-bottom: 8px;
 }
 #about-me p {
 	width: 80%;
@@ -94,9 +96,16 @@ body {
 	/*	min-height: 100vh; */
 }
 .title{
+	font-size: 27px;
 	text-align: center;
 	padding-block: 2em;
 }
+
+.title_question{
+	font-size: 27px;
+}
+
+
 .gallery .nav {
 	justify-content: center;
 }
@@ -147,7 +156,9 @@ body {
 	font-family: Spectral;
 	font-style: italic;
 	font-weight: 300;
-
+	font-size: 37.5px;
+	margin-bottom: 8px;
+	line-height: 1.2;
 }
 .quote__author {
 	font-family: Spectral;
@@ -188,6 +199,19 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	z-index: 1;
+}
+
+.service_price p{
+	margin: 0px;
+}
+
+.service_price_info{
+	font-size: 23.5px;
+	margin-bottom: 8px;
+}
+
+.service_info_supp{
+	margin-bottom: 0px;
 }
 
 #contact {
