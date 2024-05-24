@@ -20,8 +20,9 @@
 	<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="./assets/maugallery.js"></script>
-	<script src="./assets/scripts.js"></script>
+	<!-- <script src="./assets/maugallery.js"></script>
+	<script src="./assets/scripts.js"></script> -->
+	<script src="./assets/gallery.js"></script>
 </head>
 
 <body>
@@ -82,9 +83,10 @@
 			</div>
 			<div id="about-me">
 				<h2 class="about-me__title">A propos de moi</h2>
-				<p><span class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais
-					prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre
-					immortels, voilà ce qui me fait vibrer.</span></p>
+				<p><span class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y
+						étais
+						prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre
+						immortels, voilà ce qui me fait vibrer.</span></p>
 				<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie :
 					le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos
 					yeux, ou le partager au plus grand nombre.
@@ -95,49 +97,51 @@
 		</section>
 		<section id="gallery">
 			<h2 class="title">Portfolio</h2>
-			<div class="container py-3">
-				<div class="gallery" style="display: none">
+			<div class="container py-3 container-gallery">
+				<div class="gallery">
+					<!-- <div class="gallery" style="display: none"> -->
 					<img data-gallery-tag="Concert" class="gallery-item"
-						src="./assets/images/gallery/concerts/aaron-paul.webp" 
-						alt="Aaron Paul sur scène avec des effets lumineux, le public levant les mains en l'air"/>
+						src="./assets/images/gallery/concerts/aaron-paul.webp"
+						alt="Aaron Paul sur scène avec des effets lumineux, le public levant les mains en l'air" />
 					<img data-gallery-tag="Entreprises" class="gallery-item"
 						src="./assets/images/gallery/entreprise/ali-morshedlou.webp"
-						alt="Ali Morshedlou, un homme d'affaire confiant vêtu d'un costume"/>
+						alt="Ali Morshedlou, un homme d'affaire confiant vêtu d'un costume" />
 					<img data-gallery-tag="Entreprises" class="gallery-item"
 						src="./assets/images/gallery/entreprise/jason-goodman.webp"
-						alt="Jason Goodman souriante en compagnie d'une collègue de travail"/>
+						alt="Jason Goodman souriante en compagnie d'une collègue de travail" />
 					<img data-gallery-tag="Mariages" class="gallery-item"
 						src="./assets/images/gallery/mariage/hannah-busing.webp"
-						alt="Mains d'Hannah Busing et de son mari se frôlant légèrement"/>
+						alt="Mains d'Hannah Busing et de son mari se frôlant légèrement" />
 					<img data-gallery-tag="Portrait" class="gallery-item"
 						src="./assets/images/gallery/portraits/ade-tunji.webp"
-						alt="Portrait de Ade Tunji, le visage ensolleilé et fermant les yeux"/>
+						alt="Portrait de Ade Tunji, le visage ensolleilé et fermant les yeux" />
 					<img data-gallery-tag="Mariages" class="gallery-item"
 						src="./assets/images/gallery/mariage/jakob-owens.webp"
-						alt="Jakob Owens et sa femme se promenent dans un jardin en vêtements de mariés"/>
+						alt="Jakob Owens et sa femme se promenent dans un jardin en vêtements de mariés" />
 					<img data-gallery-tag="Portrait" class="gallery-item"
 						src="./assets/images/gallery/portraits/nino-van-prattenburg.webp"
-						alt="Portrait de Nino Van Prattenburg, l'air mélancolique et touchant un grillage avec sa main"/>
+						alt="Portrait de Nino Van Prattenburg, l'air mélancolique et touchant un grillage avec sa main" />
 					<img data-gallery-tag="Concert" class="gallery-item"
-						src="./assets/images/gallery/concerts/austin-neill.webp" 
-						alt="Austin Neill chante en levant un bras en l'air avec un jeu de fumée en arrière-plan"/>
+						src="./assets/images/gallery/concerts/austin-neill.webp"
+						alt="Austin Neill chante en levant un bras en l'air avec un jeu de fumée en arrière-plan" />
 					<img data-gallery-tag="Entreprises" class="gallery-item"
 						src="./assets/images/gallery/entreprise/mateus-campos-felipe.webp"
-						alt="Mateus Campos Felipe souriante à son bureau et travaillant sur son ordinateur portable"/>
+						alt="Mateus Campos Felipe souriante à son bureau et travaillant sur son ordinateur portable" />
 				</div>
 			</div>
-			<div class="quote">
-				<figure>
-					<blockquote>
-						<p class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un
-							fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude
-							n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la
-							vérité.</p>
-					</blockquote>
-					<figcaption class="quote__author">- Richard Avedon</figcaption>
-				</figure>
-			</div>
 		</section>
+		<section class="quote">
+			<figure>
+				<blockquote>
+					<p class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un
+						fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude
+						n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la
+						vérité.</p>
+				</blockquote>
+				<figcaption class="quote__author">- Richard Avedon</figcaption>
+			</figure>
+		</section>
+
 		<section id="services">
 			<h2 class="title">Mes services</h2>
 			<div class="container">
