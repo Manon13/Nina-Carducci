@@ -33,14 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
         allButton.classList.add("buttonFilter", "active-style");
         divFilter.insertBefore(allButton, divFilter.firstChild);
 
-        // // Entourer chaque image d'une div
-        // galleryItems.forEach(item => {
-        //     const divWrapper = document.createElement("div");
-        //     divWrapper.classList.add("image-wrapper"); // Ajoutez la classe image-wrapper à la div
-        //     item.parentNode.insertBefore(divWrapper, item); // Insérer la nouvelle div avant l'élément img
-        //     divWrapper.appendChild(item); // Déplacer l'élément img à l'intérieur de la nouvelle div
-        // });
-
         //Test de la fonctionnalité de filtre
         const buttons = document.querySelectorAll(".buttonFilter");
         buttons.forEach(button => {
@@ -61,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         console.log(galleryItems, buttons)
     }
-    filterWorkCategories();
+
 
     function changeColorButton(buttons, activeButton) {
         buttons.forEach(button => {
@@ -74,4 +66,78 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+
+//geston de la modale
+
+function testModale() {
+    const galleryItems = document.querySelectorAll(".gallery-item");
+    const modal = document.querySelector(".modal");
+    const modalImage = modal.querySelector(".modal-image");
+    const prevButton = modal.querySelector(".mg-prev");
+    const nextButton = modal.querySelector(".mg-next");
+
+    let currentIndex = 0;
+    let currentCategory = "Tous";
+    let filteredItems = Array.from(galleryItems);
+
+    function updateFilteredItems() {
+        if (currentCategory === "Tous") {
+            filteredItems = Array.from(galleryItems).filter(item => item.style.display !== "none");
+        } else {
+            filteredItems = Array.from(galleryItems).filter(item => item.dataset.category === currentCategory && item.style.display !== "none");
+        }
+    }
+
+    function openModal(index) {
+        currentIndex = index;
+        modalImage.src = filteredItems[currentIndex].src;
+        modalImage.alt = filteredItems[currentIndex].alt;
+        modal.style.display = 'flex';
+    }
+
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+
+    function showPrevImage() {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : filteredItems.length - 1;
+        modalImage.src = filteredItems[currentIndex].src;
+        modalImage.alt = filteredItems[currentIndex].alt;
+    }
+
+    function showNextImage() {
+        currentIndex = (currentIndex < filteredItems.length - 1) ? currentIndex + 1 : 0;
+        modalImage.src = filteredItems[currentIndex].src;
+        modalImage.alt = filteredItems[currentIndex].alt;
+    }
+
+    galleryItems.forEach((item, index) => {
+        item.addEventListener("click", () => {
+            updateFilteredItems();
+            const filteredIndex = filteredItems.indexOf(item);
+            openModal(filteredIndex);
+        });
+    });
+
+    prevButton.addEventListener("click", showPrevImage);
+    nextButton.addEventListener("click", showNextImage);
+
+    modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    document.querySelectorAll(".buttonFilter").forEach(button => {
+        button.addEventListener("click", () => {
+            currentCategory = button.innerText;
+            updateFilteredItems();
+        });
+    });
+}
+testModale();   
+
+filterWorkCategories();
 });
+
