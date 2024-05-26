@@ -363,6 +363,14 @@ input[type="submit"] {
     max-height: 90vh;
 }
 
+.contact{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+
 @media all and (max-width: 1180px) {
 	.picture {
 		flex: 2;
