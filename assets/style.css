@@ -148,10 +148,11 @@ body {
 }
 
 .gallery-item {
-	width: 430px;
-	height: 430px;
-	padding: .5em;
+	width: 400px;
+	height: 400px;
+	margin: .5em;
 	object-fit: cover;
+	cursor: pointer;
 }
 
 .buttonFilter {
@@ -266,6 +267,7 @@ body {
 
 #contact .container {
 	display: flex;
+	padding: 0px;
 }
 
 .picture.right::before {
@@ -364,10 +366,7 @@ input[type="submit"] {
 }
 
 .contact{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 20px;
+	padding: 20px 0px;
 }
 
 

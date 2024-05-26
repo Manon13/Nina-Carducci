@@ -20,10 +20,24 @@
 	<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<!-- <script src="./assets/maugallery.js"></script>
-	<script src="./assets/scripts.js"></script> -->
 	<script src="https://kit.fontawesome.com/f74cce6e0a.js" crossorigin="anonymous"></script>
 	<script src="./assets/gallery.js"></script>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Nina Carducci",
+			"jobTitle": "Photographe",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Bordeaux",
+				"postalCode": "33200",
+				"streetAddress": "68 avenue Alsace-Lorraine"
+			},
+			"description": "Photographe professionnelle à Bordeaux. Spécialisée en portraits, mariages et événements. Capturer vos moments précieux avec art et émotion.",
+			"telephone": "05 56 67 78 89"
+		}
+	</script>
 </head>
 
 <body>
@@ -100,7 +114,6 @@
 			<h2 class="title">Portfolio</h2>
 			<div class="container py-3 container-gallery">
 				<div class="gallery">
-					<!-- <div class="gallery" style="display: none"> -->
 					<img data-gallery-tag="Concert" class="gallery-item"
 						src="./assets/images/gallery/concerts/aaron-paul.webp"
 						alt="Aaron Paul sur scène avec des effets lumineux, le public levant les mains en l'air" />
@@ -132,10 +145,10 @@
 				<dialog class="modal" style="display: none">
 					<div class="modal-content">
 						<div class="modal-body">
-						<div class="mg-prev"><i class="fa-solid fa-chevron-left"></i></div>
-						<img class="modal-image" alt="Contenu de l'image affichée dans la modale au clique">
-						<div class="mg-next"><i class="fa-solid fa-chevron-right"></i></div>
-					</div>
+							<div class="mg-prev"><i class="fa-solid fa-chevron-left"></i></div>
+							<img class="modal-image" alt="Contenu de l'image affichée dans la modale au clique">
+							<div class="mg-next"><i class="fa-solid fa-chevron-right"></i></div>
+						</div>
 				</dialog>
 			</div>
 		</section>
@@ -201,6 +214,14 @@
 		</section>
 	</main>
 	<footer id="contact">
+		<h2 class="title_question">Contact</h2>
+		<div class="contact">
+			<p>Retrouvez-moi au 68 avenue Alsace-Lorraine, 33200 Bordeaux
+				<br>Pour toute question, commande, images à retoucher ou une demande de devis,
+				<br>vous pouvez me contacter au 05 56 67 78 89 du lundi au vendredi entre 10h et 19h
+				ou utiliser le formulaire ci-dessous.
+			</p>
+		</div>
 		<div class="container">
 			<div class="form-container">
 				<h2 class="title_question">Une question ? Une demande de devis ?</h2>
@@ -224,10 +245,4 @@
 
 </html>
 
-<h2 class="title">Contact</h2>
-<div class="contact">
-	<p>Retrouvez-moi au 68 avenue Alsace-Lorraine, 33200 Bordeaux</p>
-	<p>Pour toute question, commande, images à retoucher ou une demande de devis,
-		vous pouvez me contacter au 05 56 67 78 89 du lundi au vendredi entre 10h et 19h
-		ou utiliser le formulaire ci-dessous.</p>
-</div>
+<!-- ajout au rapport : ajout de cursor pointer aux img -->
