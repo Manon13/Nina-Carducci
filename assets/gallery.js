@@ -1,7 +1,5 @@
-//Fonction pour les filtres de catégories
-
 document.addEventListener("DOMContentLoaded", function () {
-    function filterWorkCategories() {
+function filterWorkCategories() {
 
         const containerGallery = document.querySelector(".container-gallery");
         const divGallery = document.querySelector(".gallery");
@@ -12,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const galleryItems = document.querySelectorAll(".gallery-item");
         const categories = new Set();
-
 
         galleryItems.forEach(item => {
             categories.add(item.dataset.galleryTag);
@@ -50,8 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
 
-
-        console.log(galleryItems, buttons)
+        console.log(galleryItems, buttons);
     }
 
 
@@ -69,8 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //geston de la modale
-
-function testModale() {
+function openGalleryModal() {
     const galleryItems = document.querySelectorAll(".gallery-item");
     const modal = document.querySelector(".modal");
     const modalImage = modal.querySelector(".modal-image");
@@ -136,7 +131,7 @@ function testModale() {
         });
     });
 }
-testModale();   
+openGalleryModal();   
 
 filterWorkCategories();
 });

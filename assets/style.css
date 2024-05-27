@@ -137,7 +137,6 @@ body {
 }
 
 #gallery {
-	min-height: 100vh;
 	margin: 0 auto;
 }
 
@@ -361,7 +360,7 @@ input[type="submit"] {
 }
 
 .modal-image {
-    max-width: 470px;
+    width: 470px;
     max-height: 90vh;
 }
 

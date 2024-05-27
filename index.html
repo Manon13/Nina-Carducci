@@ -10,6 +10,20 @@
 	<meta robots="index, follow">
 	<meta name="author" content="Nina Carducci">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Balise Open Graph-->
+	<meta property="og:site_name" content="Nina Carducci" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="#" /> <!-- mettre l'url du site -->
+	<meta property="og:title" content="Nina Carducci - Photographe professionnelle à Bordeaux" />
+	<meta property="og:description" content="Photographes spécialisée en portraits, mariages et événements." />
+	<meta property="og:image" content="#" /> <!-- mettre l'image du site-->
+	<!--Balise Twitter Cards-->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@nina-carducci" /> <!-- mettre le bon nom de compte-->
+	<meta name="twitter:title" content="Nina Carducci - Photographe professionnelle à Bordeaux" />
+	<meta name="twitter:description" content="Photographes spécialisée en portraits, mariages et événements." />
+	<meta name="twitter:image" content="#" /> <!-- mettre l'image du site-->
+	<meta name="twitter:url" content="#" /> <!-- mettre l'url du site -->
 	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
 	<link rel="stylesheet" href="./assets/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,24 +39,39 @@
 	<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
-			"@type": "Person",
+			"@type": "LocalBusiness",
 			"name": "Nina Carducci",
-			"jobTitle": "Photographe",
 			"address": {
 				"@type": "PostalAddress",
+				"streetAddress": "68 avenue Alsace-Lorraine",
 				"addressLocality": "Bordeaux",
+				"addressRegion": "Nouvelle-Aquitaine",
 				"postalCode": "33200",
-				"streetAddress": "68 avenue Alsace-Lorraine"
-			},
-			"description": "Photographe professionnelle à Bordeaux. Spécialisée en portraits, mariages et événements. Capturer vos moments précieux avec art et émotion.",
-			"telephone": "05 56 67 78 89"
+				"addressCountry": "France"
+				}
+				"telephone": "05 56 67 78 89",
+				"openingHoursSpecification":[
+	    			{
+	        			"@type": "OpeningHoursSpecification",
+	        			"dayOfWeek": [
+	            		"Monday",
+	            		"Tuesday",
+	            		"Wednesday",
+	            		"Thursday",
+	            		"Friday"
+	        			],
+	        			"opens": "10:00",
+	        			"closes": "19:00"
+	    			}
+	    			]
 		}
+			</script>
 	</script>
 </head>
 
-<body>
+<body itemscope itemtype="https://schema.org/Person">
 	<header class="top-header">
-		<h1 class="name">Nina Carducci</h1>
+		<h1 class="name"><span itemprop="name">Nina Carducci</span></h1>
 		<nav class="nav">
 			<ul>
 				<li><a href="#about">À propos</a></li>
@@ -56,7 +85,6 @@
 	</header>
 	<main>
 		<section id="header">
-
 			<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 				<div class="carousel-indicators">
 					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -94,7 +122,7 @@
 		</section>
 		<section id="about">
 			<div class="picture left">
-				<img src="./assets/images/nina-carducci.webp" alt="La photographe Nina Carducci">
+				<img src="./assets/images/nina-carducci.webp" itemprop="image" alt="La photographe Nina Carducci">
 			</div>
 			<div id="about-me">
 				<h2 class="about-me__title">A propos de moi</h2>
@@ -164,40 +192,52 @@
 			</figure>
 		</section>
 
-		<section id="services">
+		<section id="services" itemscope itemtype="https://schema.org/Service">
 			<h2 class="title">Mes services</h2>
 			<div class="container">
-				<div class="service">
-					<div class="service__description">
+				<div class="service" itemprop="hasOfferCatalog" itemscope itemtype="https://schema.org/OfferCatalog">
+					<div class="service__description" itemprop="itemListElement" itemscope
+						itemtype="https://schema.org/Offer">
+						<meta itemprop="name" content="Shooting photo">
 						<h3>Shooting photo</h3>
 						<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace
 							en Île-de-France pour réaliser vos photos</p>
 					</div>
-					<div class="service__price">
-						<p class="service_price_info">350€/demi journée</p>
+					<div class="service__price" itemprop="priceSpecification" itemscope
+						itemtype="https://schema.org/PriceSpecification">
+						<p class="service_price_info" itemprop="priceCurrency" content="EUR">350€/demi journée</p>
+						<meta itemprop="price" content="350">
 						<p class="service_info_supp">Matériel, déplacement inclus</p>
 					</div>
 
 				</div>
 				<div class="service">
-					<div class="service__description">
+					<div class="service__description" itemprop="itemListElement" itemscope
+						itemtype="https://schema.org/Offer">
+						<meta itemprop="name" content="Retouches">
 						<h3>Retouches</h3>
 						<p>Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu
 							optimal pour vos publications</p>
 					</div>
-					<div class="service__price">
-						<p class="service_price_info">50€/photo</p>
+					<div class="service__price" itemprop="priceSpecification" itemscope
+						itemtype="https://schema.org/PriceSpecification">
+						<p class="service_price_info" itemprop="priceCurrency" content="EUR">50€/photo</p>
+						<meta itemprop="price" content="50">
 						<p class="service_info_supp">2 AR par photo</p>
 					</div>
 				</div>
 				<div class="service">
-					<div class="service__description">
+					<div class="service__description" itemprop="itemListElement" itemscope
+						itemtype="https://schema.org/Offer">
+						<meta itemprop="name" content="Album photos">
 						<h3>Album photos</h3>
 						<p>Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers
 							un album photo personnalisé</p>
 					</div>
-					<div class="service__price">
-						<p class="service_price_info">400€ album A4</p>
+					<div class="service__price" itemprop="priceSpecification" itemscope
+						itemtype="https://schema.org/PriceSpecification">
+						<p class="service_price_info" itemprop="priceCurrency" content="EUR">400€ album A4</p>
+						<meta itemprop="price" content="400">
 						<p class="service_info_supp">30 pages recto/verso</p>
 					</div>
 				</div>
@@ -244,5 +284,3 @@
 </body>
 
 </html>
-
-<!-- ajout au rapport : ajout de cursor pointer aux img -->
