@@ -365,7 +365,12 @@ input[type="submit"] {
 }
 
 .contact{
-	padding: 20px 0px;
+	padding: 20px 00px;
+}
+
+.divContact{
+	text-align: center;
+	margin-bottom: 50px;
 }
 
 
@@ -387,6 +392,13 @@ input[type="submit"] {
 	#about-me h6,
 	#about-me p {
 		width: 100%;
+	}
+
+	
+	.gallery-item {
+		width: 300px;
+		height: 300px;
+		margin: 5px;
 	}
 }
 
@@ -455,6 +467,10 @@ input[type="submit"] {
 		right: 0;
 		z-index: -1;
 	}
+
+	.gallery{
+		justify-content: center;
+	}
 }
 
 @media all and (max-width: 650px) {
@@ -500,5 +516,15 @@ input[type="submit"] {
 
 	.picture {
 		width: 80%;
+	}
+
+	.divFilters{
+		flex-direction: column;
+	}
+
+	.gallery-item {
+		width: 250px;
+		height: 250px;
+		margin: 5px;
 	}
 }
