@@ -1,6 +1,6 @@
 # Débuggez et optimisez un site de photographe
 
 
-## Vous êtes sur le branche **Optimisation**
+## Vous êtes sur la branche **Optimisation**
 
-Veuillez trouver toutes les modifications que j'ai apportées au projet sur cette branche.
+Veuillez trouver toutes les modifications que j'ai apportées pour le site de Nina Carducci sur cette branche.
