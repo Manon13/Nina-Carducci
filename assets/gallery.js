@@ -1,3 +1,10 @@
+/**
+ * Filtre les éléments de la galerie par catégories.
+ * 
+ * Crée des boutons pour chaque catégorie trouvée dans les éléments de la galerie et ajoute un bouton "Tous".
+ * Affiche les éléments correspondant à la catégorie du bouton cliqué
+ * et le style du bouton actif est mis à jour
+ **/
 export function filterWorkCategories() {
     const containerGallery = document.querySelector(".container-gallery");
     const divGallery = document.querySelector(".gallery");
@@ -43,7 +50,16 @@ export function filterWorkCategories() {
 }
 
 
-// Changement de couleur des boutons
+/**
+ * Change la couleur du bouton actif.
+ * 
+ * Met à jour les styles des boutons pour indiquer quel bouton est actif.
+ * Le bouton actif obtient la classe "active-style",
+ * tandis que les autres boutons obtiennent la classe "default-style".
+ * 
+ * @param {NodeList} buttons - La liste des boutons de filtre.
+ * @param {HTMLElement} activeButton - Le bouton actuellement actif.
+ */
 function changeColorButton(buttons, activeButton) {
     buttons.forEach(button => {
         if (button === activeButton) {
@@ -62,7 +78,13 @@ let currentIndex = 0;
 let filteredItems = [];
 
 
-// Gestion de l'ouverture de la modale
+/** Ouvre la modale et affiche l'image correspondante.
+ * 
+ * Met à jour l'image de la modale avec l'image de l'élément filtré à l'index spécifié,
+ * puis affiche la modale.
+ * 
+ * @param {number} index - L'index de l'image à afficher dans la modale.
+ **/
 function openModal(index) {
     const modal = document.querySelector(".modal");
     const modalImage = modal.querySelector(".modal-image");
@@ -74,14 +96,14 @@ function openModal(index) {
 }
 
 
-// Gestion de la fermeture de la modale
+/** Gestion de la la fermeture de la modale. **/
 function closeModal() {
     const modal = document.querySelector(".modal");
     modal.style.display = 'none';
 }
 
 
-// Gestion de l'affichage de l'image précédente
+/** Affiche l'image précédente dans la modale. **/
 function showPrevImage() {
     const modal = document.querySelector(".modal");
     const modalImage = modal.querySelector(".modal-image");
@@ -92,7 +114,7 @@ function showPrevImage() {
 }
 
 
-// Gestion de l'affichage de l'image suivante
+/** Affiche l'image suivante dans la modale. **/
 function showNextImage() {
     const modal = document.querySelector(".modal");
     const modalImage = modal.querySelector(".modal-image");
@@ -103,7 +125,12 @@ function showNextImage() {
 }
 
 
-// Mise à jour des éléments filtrés
+/** Met à jour la liste des éléments filtrés en fonction de la catégorie actuelle.
+ * 
+ * Filtre les éléments de la galerie en fonction de la catégorie sélectionnée et de leur visibilité.
+ * Si la catégorie actuelle est "Tous", tous les éléments visibles sont inclus dans `filteredItems`.
+ * Sinon, seuls les éléments visibles appartenant à la catégorie sélectionnée sont inclus.
+ **/
 function updateFilteredItems() {
     const galleryItems = document.querySelectorAll(".gallery-item");
     let currentCategory = "Tous";
@@ -115,7 +142,14 @@ function updateFilteredItems() {
 }
 
 
-// Gestion de la modale
+/**
+ * Ouvre la modale de la galerie et gère les interactions avec les éléments.
+ * 
+ * Associe les événements nécessaires pour ouvrir la modale avec l'image correspondante
+ * lorsqu'un élément de la galerie est cliqué. Gère également les événements pour la navigation
+ * entre les images dans la modale et pour la fermeture de la modale en cliquant en dehors de l'image.
+ * Met à jour la liste des éléments filtrés en fonction de la catégorie sélectionnée.
+ **/
 export function openGalleryModal() {
     const galleryItems = document.querySelectorAll(".gallery-item");
     const modal = document.querySelector(".modal");
